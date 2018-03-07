@@ -1,1 +1,77 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Microsoft Hotspot 2.0 Test</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var xmlInput = document.getElementById("xml").value;
+            var result = window.external.msProvisionNetworks(xmlInput);
+        });
+    </script>
+</head>
+<body>
+
+<textarea id='xml'>
+<?xml version="1.0" encoding="UTF-16"?>
+<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+    <name>SMSI Passpoint</name>
+    <SSIDConfig>
+        <SSID>
+            <name>SMSI Passpoint Secure</name>
+        </SSID>
+    </SSIDConfig>
+    <Hotspot2>
+        <DomainName>smithmicro.net</DomainName>
+        <NAIRealm>
+            <name>dummy.com</name>
+        </NAIRealm>
+    </Hotspot2>
+    <connectionType>ESS</connectionType>
+    <connectionMode>auto</connectionMode>
+    <MSM>
+        <security>
+            <authEncryption>
+                <authentication>WPA2</authentication>
+                <encryption>AES</encryption>
+                <useOneX>true</useOneX>
+            </authEncryption>
+            <OneX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.microsoft.com/networking/OneX/v1">
+                <authMode>user</authMode>
+                <EAPConfig>
+                    <EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig">
+                        <EapMethod>
+                            <Type xmlns="http://www.microsoft.com/provisioning/EapCommon">21</Type>
+                            <VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId>
+                            <VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType>
+                            <AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">311</AuthorId>
+                        </EapMethod>
+                        <Config>
+                            <EapTtls xmlns="http://www.microsoft.com/provisioning/EapTtlsConnectionPropertiesV1">
+                                <ServerValidation>
+                                    <ServerNames/>
+                                    <TrustedRootCAHash>47 be ab c9 22 ea e8 0e 78 78 34 62 a7 9f 45 c2 54 fd e6 8b</TrustedRootCAHash>
+                                    <DisablePrompt>false</DisablePrompt>
+                                </ServerValidation>
+                                <Phase2Authentication>
+                                    <PAPAuthentication/>
+                                </Phase2Authentication>
+                                <Phase1Identity>
+                                    <IdentityPrivacy>true</IdentityPrivacy>
+                                    <AnonymousIdentity>anonymous</AnonymousIdentity>
+                                </Phase1Identity>
+                            </EapTtls>
+                        </Config>
+                    </EapHostConfig>
+                </EAPConfig>
+            </OneX>
+        </security>
+    </MSM>
+</WLANProfile>
+</textarea>
+
+
+</body>
+</html>
+
+
+
