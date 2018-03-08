@@ -1,0 +1,411 @@
+
+/****** CSS Reset *********/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/****** CSS Reset End *********/
+
+/********************* Interent Font *******************/
+
+@font-face {
+    font-family: 'Museo';
+    src: url('../fonts/Museo_Slab_900.otf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Museo';
+    src: url('../fonts/Museo_Slab_100.otf');
+    font-weight: 100;
+}
+
+
+@font-face{
+    font-family:'Avenir';
+    src:url('../fonts/AvenirLTStd-Roman.otf');
+    font-weight: 500;
+}
+
+@font-face{
+    font-family:'Avenir';
+    src:url('../fonts/AvenirLTStd-Light.otf');
+    font-weight: 300;
+}
+
+
+/********************* Internet Font End *******************/
+
+
+.animation {
+        background:url('http://passpoint.boingodev.com/img/ajax-loader.gif') no-repeat;
+        width: 128px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        top: 50%;
+}
+
+section.cont {
+        border: none;
+        clear: both;
+        margin-top: 0;
+        height: 100%;
+        min-height: 405px;
+        max-height: 1024px;
+        position: relative;
+        width: 128px;
+        top: -85px;
+}
+
+
+body,
+input { color: #545861; }
+
+h1,
+h2  {
+	font-family: 'Museo', helvetica, arial, sans-serif;
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 200%;
+	margin: 25px 0 20px;
+}
+
+p,
+label {
+	font-family: 'Avenir', helvetica, arial, sans-serif;
+	font-weight: 300;
+}
+
+.block { display: block; }
+
+.cyan { color: #35c0e2; }
+
+header {
+	background-color: rgba(0,0,0,.8);
+	width: 100%;
+	height: 85px;
+}
+
+header .container { padding-top: 20px; }
+
+.container {
+	margin: 0 auto;
+	position: relative;
+}
+
+.logo {
+	background:url('../img/logo.png') no-repeat;
+	width: 80px;
+	height: 40px;
+}
+
+/*********** Animation *****************/
+
+.animation {
+background-image: url(../img/ajax-loader.gif);
+position: absolute;
+top: 50%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%)
+
+}
+
+img.phone {
+	max-width:430px;
+	width:85%;
+}
+
+.imgCont {
+	clear: both;
+	float: left;
+}
+
+header .container,
+section {
+	width: 73%;
+	max-width: 940px;
+	min-width: 280px;
+}
+
+/*section { border-top: solid 1px #dddedf; }*/
+
+p,
+h1,
+h2,
+label { float: left; }
+
+label { width: 100%; }
+
+p.cyan { font-weight: 700; }
+
+.login label:last-child { clear : both; }
+
+.err { color: #cc0000; }
+
+.loginForm { float: left; }
+
+input { border: solid 1px #999; }
+
+.redButton {
+	-moz-text-shadow: 0 -1px 1px rgba(0,0,0,.5);
+	-webkit-text-shadow: 0 -1px 1px rgba(0,0,0,.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,.5);
+
+	background: #e13827; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e13827 0%, #c61d15 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e13827), color-stop(100%,#c61d15)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e13827 0%,#c61d15 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e13827 0%,#c61d15 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e13827 0%,#c61d15 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e13827 0%,#c61d15 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e13827', endColorstr='#c61d15',GradientType=0 ); /* IE6-8 */
+
+	border-radius: .25em;
+	text-decoration: none;
+	clear: both;
+	text-align: center;
+  color: #fff;
+}
+
+.redButton span {
+	color: #fff;
+	font-family: 'Avenir', helvetica, arial, sans-serif;
+	font-weight: 500;
+}
+
+.airportListCont {
+	float: left;
+	width: 100%;
+}
+
+.airportList { clear: both; }
+
+.airportList li {
+	float: left;
+	margin-bottom: 3px;
+	width: 100%;
+}
+
+.airportList li span {
+	font-family: 'Avenir', helvetica, arial, sans-serif;
+	float: left;
+}
+
+.airportList li span:first-child { font-weight: 700; }
+
+.airportList li span:last-child { clear: right; }
+
+.imgCont { margin-top: 20px;}
+
+
+@media screen and (min-width:768px) {
+
+	/************** Shared ****************/
+
+	section { margin: 100px auto 0; }
+
+
+	h1 {
+		font-size: 47px;
+		line-height: 49px;
+	}
+
+	p, label span {
+		font-size: 23px;
+		line-height: 35px;
+		padding-top: 20px;
+	}
+
+
+	/************** Success Page *************/
+
+	.success h1 { padding-bottom: 50px; }
+
+	.airportList li span:first-child { width: 60px; }
+
+	.imgCont {
+		float: left;
+		text-align: center;
+	}
+
+	/*********** Unsupported *****************/
+
+	.unsupported h1 { padding-bottom: 35px; }
+
+	/************ Ineligible *****************/
+
+	.ineligible h1 { padding-bottom: 40px; }
+
+	/************* Login Form **************/
+
+	.login { padding-top: 30px; }
+
+	.loginForm { padding: 65px 0 ; }
+
+	input[type="text"] {
+		width: 452px;
+		height: 52px;
+		font-size: 23px;
+		padding-left: 10px;
+		border-radius: 15px;
+		text-transform: lowercase;
+	}
+
+
+	.username {
+		margin-bottom: 40px;
+	}
+
+        input[type="password"] {
+                width: 452px;
+                height: 52px;
+                font-size: 23px;
+                padding-left: 10px;
+                border-radius: 15px;
+        }
+
+	.err { margin-top: 10px;}
+
+	.redButton {
+		width: 360px;
+		height: 40px;
+		float: left;
+		margin-top: 30px;
+	}
+
+	.redButton span { padding-top: 15px; }
+}
+/*
+//end max-width:768px
+*/
+
+
+@media screen and (max-width:767px) {
+
+	/************** Shared ****************/
+
+	section { margin: 40px auto 0; }
+
+	h1 {
+		font-size: 28px;
+		line-height: 32px;
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}
+
+	p, label span {
+		font-size: 16px;
+		line-height: 22px
+	}
+
+	/************** Success Page *************/
+
+	.success h1 { padding-bottom: 25px; }
+
+	.success h2 { font-size: 20px; }
+
+	.airportList li span { font-size: 14px; }
+
+	.airportList li span:first-child { width: 50px; }
+
+	/********* Unsupported *******************/
+
+	.unsupported h1 { padding-bottom: 30px}
+
+	/******** Ineligible *****************/
+
+	.ineligible h1 { padding-bottom: 20px; }
+
+	/************* Login Form **************/
+
+	.login { padding-top: 20px; }
+
+	.loginForm { padding:15px 0 65px; }
+
+	input[type="text"] {
+		width: 280px;
+		height: 40px;
+		font-size: 16px;
+		padding-left: 5px;
+		border-radius: 6px;
+		text-transform: lowercase;
+	}
+
+	.username { margin-bottom: 25px; }
+
+	input[type="password"] {
+                width: 280px;
+                height: 40px;
+                font-size: 16px;
+                padding-left: 5px;
+                border-radius: 6px;
+	}
+
+	.err { margin-top: 10px;}
+
+	.redButton {
+		width: 280px;
+		height: 50px;
+		float: left;
+		margin-top: 20px;
+	}
+
+	.redButton span { padding-top: 19px; }
+
+}
+
+@media screen and (max-width:568px) {
+
+	.airportList li span:last-child { font-size: 12px; }
+
+
+}
+
